@@ -69,9 +69,9 @@ async function saveOrder(e){
 
 function showConfirmation(order){
   const c = document.getElementById('confirmation');
-  c.classList.remove('hidden');
+  c.hidden = false;
   c.textContent = `Order received for ${order.name} — Delivery: ${order.date}`;
-  setTimeout(()=>c.classList.add('hidden'),5000);
+  setTimeout(()=>{ c.hidden = true; c.textContent = ''; },5000);
 }
 
 async function fetchOrdersFromApi(){
