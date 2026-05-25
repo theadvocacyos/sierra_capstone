@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg: #eef0e6;
+  --surface: #ffffff;
+  --text: #2d3a2e;
+  --muted: #6a6f64;
+  --accent: #6f8b71;
+  --accent-strong: #3e5b45;
+  --border: rgba(65, 84, 62, 0.16);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+}
+
+body {
+  padding: 1.5rem;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  padding: 1rem 1.25rem;
+  background: rgba(255,255,255,0.92);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(45, 58, 46, 0.08);
+  margin-bottom: 1.75rem;
+}
+
+header p {
+  margin: 0 0 0.5rem 0;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+header h1 {
+  margin: 0;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2.3rem, 3vw, 3.5rem);
+  line-height: 1.05;
+  color: var(--accent-strong);
+}
+
+section {
+  margin-bottom: 1.75rem;
+}
+
+section h2 {
+  margin: 0 0 0.5rem 0;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2rem;
+  color: var(--accent-strong);
+}
+
+section h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.05rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+section p,
+section li,
+.gallery-copy p,
+footer p,
+header p {
+  color: var(--muted);
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+ul li {
+  margin-bottom: 0.55rem;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  justify-content: space-between;
+}
+
+.gallery-card {
+  flex: 1 1 calc(25% - 1rem);
+  min-width: 220px;
+  background: var(--surface);
+  padding: 1rem;
+  border-radius: 22px;
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 40px rgba(45, 58, 46, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 48px rgba(45, 58, 46, 0.12);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.gallery-copy h4 {
+  margin: 0 0 0.5rem 0;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.3rem;
+  color: var(--accent-strong);
+}
+
+.gallery-copy p {
+  margin: 0 0 0.75rem 0;
+}
+
+.gallery-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.gallery-copy a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.gallery-copy a:hover {
+  text-decoration: underline;
+}
+
+form {
+  background: rgba(255,255,255,0.95);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 1rem 1.2rem;
+}
+
+form table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 0.7rem;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+  color: var(--accent-strong);
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  font-family: inherit;
+  padding: 0.75rem 0.85rem;
+  border: 1px solid #d6d9d2;
+  border-radius: 14px;
+  background: #fafaf6;
+  color: var(--text);
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  outline: 2px solid rgba(111, 139, 113, 0.35);
+}
+
+input[type="submit"] {
+  background: var(--accent-strong);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  padding: 0.95rem 1.25rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 180ms ease;
+}
+
+input[type="submit"]:hover {
+  background: #2f4b34;
+}
+
+footer p {
+  margin: 0;
+  padding: 1rem 0 0 0;
+  text-align: center;
+  color: var(--muted);
+}
+
+@media (max-width: 980px) {
+  .gallery-card {
+    flex: 1 1 calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 680px) {
+  body {
+    padding: 1rem;
+  }
+
+  .gallery-card {
+    flex: 1 1 100%;
+  }
+
+  form table {
+    display: block;
+  }
+
+  form td {
+    display: block;
+    width: 100%;
+  }
+
+  form tr {
+    display: block;
+  }
+}
+

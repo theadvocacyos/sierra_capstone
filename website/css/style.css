@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@300;400;700&display=swap');
+
+:root {
+  --bg: #fbfbfd;
+  --text: #222222;
+  --accent: #2b6cb0;
+}
+
+/* Page base */
+html, body {
+  margin: 0;
+  padding: 0 1rem;
+  background-color: var(--bg); /* background-color property */
+  color: var(--text); /* color property */
+  font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; /* font-family property */
+  line-height: 1.45;
+}
+
+header p { margin: 0 0 0.25rem 0; color: #555; }
+header h1 { font-family: 'Merriweather', serif; color: var(--accent); margin: 0 0 0.5rem 0; }
+
+a { color: var(--accent); }
+
+/* Make images responsive (demonstrates responsive sizing without external layout CSS) */
+img { max-width: 100%; height: auto; display: block; }
+
+/* Simple gallery layout */
+.gallery-grid { display: flex; flex-wrap: wrap; gap: 1rem; }
+.gallery-card { flex: 1 1 48%; }
+.gallery-copy { margin-top: 0.5rem; }
+
+/* Form readability */
+form input, form select, form textarea { font-family: inherit; }
+
+/* Accessibility: focus states */
+a:focus { outline: 3px solid rgba(43,108,176,0.25); outline-offset: 2px; }
