@@ -36,15 +36,6 @@ a:focus {
   text-decoration: underline;
 }
 
-strong {
-  font-weight: 700;
-}
-
-em {
-  font-style: italic;
-  color: #55614c;
-}
-
 .page-shell {
   max-width: 1240px;
   margin: 0 auto;
@@ -52,10 +43,12 @@ em {
 }
 
 .hero {
-  background: #ffffff;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 35%, rgba(255, 255, 255, 0.2) 100%), url('website/images/jessie-daniella-QLuleNy8LMM-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
   border: 1px solid rgba(95, 101, 82, 0.18);
   border-radius: 32px;
-  padding: 2rem 2.5rem;
+  padding: 5rem 3rem;
   box-shadow: 0 24px 60px rgba(41, 48, 39, 0.08);
   margin-bottom: 2rem;
 }
@@ -109,6 +102,52 @@ em {
   justify-content: center;
 }
 
+#assignment-8 {
+  width: 100%;
+  margin: 0 auto 1.5rem;
+}
+
+.assignment-8-container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2rem 2.25rem;
+  min-height: 220px;
+  border-radius: 28px;
+  background-color: #fbf6ef;
+  background-image: url('website/images/tetiana-siedaia-cGq62sJZZT0-unsplash.jpg');
+  background-position: right center;
+  background-size: 420px;
+  background-repeat: no-repeat;
+  box-shadow: 0 20px 50px rgba(41, 48, 39, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.assignment-8-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(251,246,239,0.96) 0%, rgba(251,246,239,0.72) 100%);
+  pointer-events: none;
+}
+
+.assignment-8-container > * {
+  position: relative;
+}
+
+.assignment-8-container h2 {
+  margin-top: 0;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.95rem;
+  color: #3f4b39;
+}
+
+.assignment-8-container p {
+  margin: 1rem 0 0;
+  color: #5e664f;
+  max-width: 670px;
+}
+
 .assignment-box h2 {
   margin: 0 0 0.6rem 0;
   font-size: 1.3rem;
@@ -121,7 +160,7 @@ em {
 
 .overview-grid {
   display: grid;
-  grid-template-columns: 1.6fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 1.5rem;
   margin-bottom: 2rem;
 }
@@ -132,6 +171,17 @@ em {
   border-radius: 28px;
   padding: 1.5rem;
   box-shadow: 0 18px 42px rgba(41, 48, 39, 0.06);
+}
+
+.assignment-8-cta {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: min(330px, 44%);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 20px 45px rgba(41, 48, 39, 0.12);
+  border-radius: 24px;
+  padding: 1.4rem 1.5rem;
 }
 
 .section-panel h2 {
@@ -242,7 +292,6 @@ em {
   margin-top: 1rem;
   display: inline-block;
   color: #617556;
-  font-weight: 600;
 }
 
 .order-section {
@@ -296,7 +345,6 @@ label {
   display: block;
   margin-bottom: 0.5rem;
   color: #3f4b39;
-  font-weight: 600;
 }
 
 input,
@@ -332,7 +380,6 @@ button[type='submit'] {
   border-radius: 14px;
   background: #3f4b39;
   color: #ffffff;
-  font-weight: 500;
   cursor: pointer;
   transition: background 180ms ease, transform 180ms ease, box-shadow 180ms ease;
 }
@@ -395,4 +442,3 @@ footer {
     display: block;
   }
 }
-
